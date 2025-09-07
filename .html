@@ -1,0 +1,35 @@
+<body>
+  <h1>🍕 Wow Wow Restaurant</h1>
+
+  <h2>📋 Menu</h2>
+  <div class="menu-container" id="menu-list">
+    <!-- Menu items will be injected by JavaScript -->
+  </div>
+
+  <div class="controls">
+    <h3>Place Your Order</h3>
+    <label for="item">Item:</label>
+    <select id="item"></select>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="1" value="1">
+    <button onclick="addItem()">Add</button>
+    <button onclick="removeItem()">Remove</button>
+  </div>
+
+  <div class="order-summary">
+    <h3>Your Order</h3>
+    <ul id="order-items"></ul>
+    <div class="total" id="total">Total: Rs0</div>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <!-- ✅ Checkout Modal -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>✅ Thank you for your order!</h2>
+      <pre id="orderSummaryText"></pre>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</body>
